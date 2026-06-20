@@ -1,0 +1,234 @@
+/* PROCESS + REVIEWS */
+
+.process {
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.process__head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  gap: 0;
+}
+
+/* Connecting line */
+.process__steps::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: var(--color-hairline);
+  z-index: 0;
+}
+
+.process__step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.process__step-dot {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-hairline);
+  background: var(--color-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.5s var(--ease-out);
+  position: relative;
+}
+
+.process__step-dot::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px dashed transparent;
+  transition: border-color var(--transition);
+}
+
+.process__step:hover .process__step-dot,
+.process__step.is-active .process__step-dot {
+  border-color: var(--color-gold);
+  background: var(--color-gold-dim);
+  color: var(--color-gold);
+}
+
+.process__step:hover .process__step-dot::before,
+.process__step.is-active .process__step-dot::before {
+  border-color: rgba(201,169,110,0.3);
+  animation: rotateDash 6s linear infinite;
+}
+
+@keyframes rotateDash {
+  to { transform: rotate(360deg); }
+}
+
+.process__step-index {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 0.75rem;
+}
+
+.process__step-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-cream);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.process__step-desc {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* REVIEWS */
+
+.reviews {
+  background: var(--color-obsidian);
+  overflow: hidden;
+}
+
+.reviews__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.reviews__marquee-wrap {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+}
+
+.reviews__marquee {
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee 40s linear infinite;
+  width: max-content;
+}
+
+.reviews__marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.reviews__card {
+  width: 22rem;
+  flex-shrink: 0;
+  background: var(--color-card);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  position: relative;
+  transition: border-color var(--transition);
+}
+
+.reviews__card:hover {
+  border-color: rgba(201,169,110,0.3);
+}
+
+.reviews__stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+}
+
+.reviews__text {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-cream);
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.reviews__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 1.25rem;
+}
+
+.reviews__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews__avatar-placeholder {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-gold);
+}
+
+.reviews__name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-cream);
+}
+
+.reviews__meta {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-top: 0.15rem;
+}
+
+.reviews__quote-mark {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--color-gold);
+  opacity: 0.1;
+  line-height: 1;
+}

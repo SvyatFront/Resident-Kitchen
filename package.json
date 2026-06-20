@@ -1,0 +1,19 @@
+{
+  "name": "resident-kitchen",
+  "version": "1.0.0",
+  "description": "Resident Kitchen — премиальные кухни на заказ",
+  "scripts": {
+    "dev": "serve -p 5500 .",
+    "start": "serve -p 5500 .",
+    "build": "echo 'Static site — no build needed'",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "gh-pages": "^6.1.1"
+  },
+  "keywords": ["kitchen", "landing", "premium"],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true
+}

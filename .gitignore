@@ -5,3 +5,12 @@ Thumbs.db
 *.log
 .env
 .env.local
+
+# Дубликат hero-изображения в корне images/ (используется images/hero/hero-bg.*)
+images/hero.img.png
+
+# Черновики и рабочие заметки
+*.txt
+
+# VS Code
+.vscode/

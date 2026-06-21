@@ -426,3 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initValidation();
   initModalClose();
 });
+
+// Lucide icons — initialise after the deferred script has executed
+window.addEventListener('load', () => {
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+});

@@ -27,7 +27,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(13,13,13,0.95) 50%, rgba(13,13,13,0.6) 100%),
+    linear-gradient(to right, rgba(13, 13, 13, 0.95) 50%, rgba(13, 13, 13, 0.6) 100%),
     linear-gradient(to top, var(--color-obsidian) 0%, transparent 30%);
 }
 
@@ -272,7 +272,7 @@
 .modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
 }
 
@@ -309,7 +309,7 @@
   height: 4rem;
   border-radius: 50%;
   background: var(--color-gold-dim);
-  border: 1px solid rgba(201,169,110,0.3);
+  border: 1px solid rgba(201, 169, 110, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;

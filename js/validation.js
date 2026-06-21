@@ -30,12 +30,7 @@ function applyPhoneFilter(input) {
     }
   });
 
-  input.addEventListener('paste', (e) => {
-    e.preventDefault();
-    const pasted = (e.clipboardData || window.clipboardData).getData('text');
-    const cleaned = pasted.replace(/[^\d+()\- ]/g, '');
-    document.execCommand('insertText', false, cleaned);
-  });
+  // Paste is allowed — the 'input' handler above already strips non-phone chars
 }
 
 function setupForm(form) {

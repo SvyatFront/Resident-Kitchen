@@ -141,8 +141,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100dvh;
   background: var(--color-obsidian);
   z-index: var(--z-menu);
   display: flex;
@@ -150,15 +150,15 @@
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  touch-action: none;
 }
 
 .header__mobile-menu.is-open {
-  opacity: 1;
+  transform: translateY(0);
   pointer-events: all;
 }
 

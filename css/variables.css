@@ -1,0 +1,80 @@
+/* DESIGN TOKENS — Resident Kitchen */
+
+:root {
+  /* --- Цвета --- */
+  --color-obsidian:    #0D0D0D;
+  --color-surface:     #131313;
+  --color-card:        #1A1A1A;
+  --color-card-hover:  #222222;
+  --color-gold:        #C9A96E;
+  --color-gold-hover:  #D4B87E;
+  --color-gold-light:  #E8C98A;
+  --color-gold-dim:    rgba(201, 169, 110, 0.15);
+  --color-cream:       #F0EBE1;
+  --color-white:       #FFFFFF;
+  --color-muted:       #6B6B6B;
+  --color-muted-light: #999999;
+  --color-hairline:    #2A2A2A;
+  --color-overlay:     rgba(0, 0, 0, 0.7);
+  --color-grain:       url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+
+  /* --- Типографика --- */
+  --font-display:      'Cormorant Garamond', Georgia, serif;
+  --font-body:         'Jost', 'Segoe UI', sans-serif;
+  --font-mono:         'JetBrains Mono', 'Courier New', monospace;
+
+  /* --- Размеры шрифтов --- */
+  --text-xs:           0.75rem;
+  --text-sm:           0.875rem;
+  --text-base:         1rem;
+  --text-lg:           1.125rem;
+  --text-xl:           1.25rem;
+  --text-2xl:          1.5rem;
+  --text-3xl:          2rem;
+  --text-4xl:          2.5rem;
+  --text-5xl:          3.5rem;
+  --text-6xl:          4.5rem;
+  --text-hero:         clamp(3rem, 6vw, 6rem);
+  --text-ghost:        clamp(6rem, 15vw, 14rem);
+
+  /* --- Контейнер --- */
+  --container-width:   80rem;
+  --container-padding: 1.5rem;
+
+  /* --- Отступы --- */
+  --space-xs:          0.5rem;
+  --space-sm:          1rem;
+  --space-md:          1.5rem;
+  --space-lg:          2.5rem;
+  --space-xl:          4rem;
+  --space-2xl:         6rem;
+  --space-3xl:         8rem;
+  --space-section:     clamp(5rem, 10vw, 9rem);
+
+  /* --- Радиусы --- */
+  --radius-sm:         0.25rem;
+  --radius-md:         0.5rem;
+  --radius-lg:         1rem;
+  --radius-xl:         1.5rem;
+  --radius-full:       50%;
+
+  /* --- Переходы --- */
+  --ease-out:          cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:       cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast:   0.2s var(--ease-out);
+  --transition:        0.35s var(--ease-out);
+  --transition-slow:   0.6s var(--ease-out);
+
+  /* --- Z-index --- */
+  --z-base:            1;
+  --z-dropdown:        50;
+  --z-header:          100;
+  --z-menu:            200;
+  --z-modal:           300;
+  --z-toast:           400;
+
+  /* --- Тени --- */
+  --shadow-card:       0 0.25rem 1.5rem rgba(0, 0, 0, 0.4);
+  --shadow-gold:       0 0 2rem rgba(201, 169, 110, 0.15);
+  --shadow-lift:       0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
